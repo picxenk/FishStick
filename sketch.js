@@ -18,7 +18,7 @@ let isShowing = false;
 let repellers = [];
 let attractors = [];
 
-let bars = [0, 0, 0, 0];
+let bars = [0, 0, 0, 0, 0, 0, 0, 0];
 
 function setup() {
   createCanvas(400, 600);
@@ -28,9 +28,9 @@ function setup() {
   
   
   
-  gui = createGui('test slider');  
+  gui = createGui('for debugging');  
   gui.addObject(params);
-  gui.setPosition(310, 10);
+  gui.setPosition(0, 0);
 
 
 }
@@ -41,11 +41,11 @@ function draw() {
   triangle(0, 0, width/2, 50, width, 0);
 
   // show bars
-  for (let i=0; i<4; i++) {
+  for (let i=0; i<8; i++) {
     let barHeight = bars[i];
     let barStart = height - barHeight;
     fill(0);
-    rect(0+100*i, barStart, 100, barHeight);
+    rect(0+50*i, barStart, 50, barHeight);
   }
     
   for (let i=0; i<params.effortValue; i++) {

@@ -26,7 +26,7 @@ class Particle {
 
   checkBottom(bars) {
     if (this.position.y >= height) {
-      let i = floor(this.position.x/100);
+      let i = floor(this.position.x/50);
       bars[i] += 0.002 ;
     }
   }

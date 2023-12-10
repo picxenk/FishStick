@@ -32,6 +32,10 @@ function setup() {
 
 function draw() {
   background(255);
+  if (getAudioContext().state !== 'running') {
+    text('tap to play', width/2, 20);
+  }
+  
   repeller.setPower(params.repellerpower);
   repeller.setSpeed(params.rotatespeed);
   repeller.move();
